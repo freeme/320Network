@@ -12,6 +12,7 @@
 @interface TTURLRequestQueue(Debug) 
 
 @property(nonatomic, readonly) NSArray *loaderQueue;
+@property(nonatomic, readonly) NSArray *runningLoaderQueue;
 @property(nonatomic, readonly) NSDictionary*  loaders;
 @property(nonatomic, readonly) NSInteger totalLoading;
 

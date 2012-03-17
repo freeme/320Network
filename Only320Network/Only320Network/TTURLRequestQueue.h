@@ -24,6 +24,7 @@
   NSMutableDictionary*  _loaders;
 
   NSMutableArray*       _loaderQueue;
+  NSMutableArray*       _runningLoaderQueue;
   NSTimer*              _loaderQueueTimer;
 
   NSInteger             _totalLoading;

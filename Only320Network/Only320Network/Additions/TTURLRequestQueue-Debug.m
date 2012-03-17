@@ -14,6 +14,10 @@
     return _loaderQueue;
 }
 
+- (NSArray*)runningLoaderQueue {
+    return _runningLoaderQueue;
+}
+
 - (NSDictionary*)loaders {
     return _loaders;
 }
