@@ -77,6 +77,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   if (self) {
     _loaders = [[NSMutableDictionary alloc] init];
     _loaderQueue = [[NSMutableArray alloc] init];
+    _runningLoaderQueue = [[NSMutableArray alloc] init];
     _maxContentLength = kDefaultMaxContentLength;
     _imageCompressionQuality = 0.75;
     _defaultTimeout = kTimeout;
@@ -90,6 +91,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   [_loaderQueueTimer invalidate];
   TT_RELEASE_SAFELY(_loaders);
   TT_RELEASE_SAFELY(_loaderQueue);
+  TT_RELEASE_SAFELY(_runningLoaderQueue);
   TT_RELEASE_SAFELY(_userAgent);
   [super dealloc];
 }
@@ -287,6 +289,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 
   } else {
     ++_totalLoading;
+    [_runningLoaderQueue addObject:loader];
     [loader load:[NSURL URLWithString:loader.urlPath]];
   }
 }
@@ -324,6 +327,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)removeLoader:(TTRequestLoader*)loader {
   --_totalLoading;
+  [_runningLoaderQueue removeObject:loader];
   [_loaders removeObjectForKey:loader.cacheKey];
 }
 
