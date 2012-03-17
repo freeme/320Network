@@ -303,27 +303,6 @@ static TTURLRequestQueue* gMainQueue = nil;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadNextInQueue {
-    NSLog(@"%s",__FUNCTION__);
-  _loaderQueueTimer = nil;
-
-  for (int i = 0;
-       i < kMaxConcurrentLoads && _totalLoading < kMaxConcurrentLoads
-       && _loaderQueue.count;
-       ++i) {
-    TTRequestLoader* loader = [[_loaderQueue objectAtIndex:0] retain];
-    [_loaderQueue removeObjectAtIndex:0];
-    [self executeLoader:loader];
-    [loader release];
-  }
-
-  if (_loaderQueue.count && !_suspended) {
-    [self loadNextInQueueDelayed];
-  }
-}
-
-/*
-- (void)loadNextInQueue {
-  NSLog(@"%s",__FUNCTION__);
   _loaderQueueTimer = nil;
   
   for (int i = 0;
@@ -340,7 +319,6 @@ static TTURLRequestQueue* gMainQueue = nil;
     [self loadNextInQueueDelayed];
   }
 }
-*/
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -653,7 +631,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   }
   [loader release];
 
-  [self loadNextInQueue];
+  [self loadNextInQueueDelayed];
 }
 
 
@@ -689,7 +667,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 
   [loader release];
 
-  [self loadNextInQueue];
+  [self loadNextInQueueDelayed];
 }
 
 
@@ -706,7 +684,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   TTDCONDITIONLOG(TTDFLAG_URLREQUEST, @"ERROR: %@", error);
   [self removeLoader:loader];
   [loader dispatchError:error];
-  [self loadNextInQueue];
+  [self loadNextInQueueDelayed];
 }
 
 
