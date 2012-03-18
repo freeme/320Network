@@ -47,6 +47,7 @@
   _tableView.dataSource = self;
   _tableView.backgroundColor = [UIColor blackColor];
   _tableView.rowHeight = 24;
+
   [self.view addSubview:_tableView];
   
   UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
