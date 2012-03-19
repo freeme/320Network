@@ -18,11 +18,13 @@
 @interface TTNetImageView : UIImageView<TTURLRequestDelegate> {
   TTURLRequest* _request;
   NSString*     _urlPath;
-  UIImage*      _image;
   UIImage*      _defaultImage;
-  BOOL          _autoresizesToImage;
   
   id<TTNetImageViewDelegate> _delegate;
+  
+  UIActivityIndicatorView *_activityIndicatorView;
+  BOOL _autoDisplayActivityIndicator;
+  BOOL _sendRequestOnClick;
 }
 
 
@@ -49,6 +51,22 @@
 @property (nonatomic, readonly) BOOL isLoaded;
 
 /**
+ If YES, load the image when user click on the view
+ Default value is NO, auto send http request to get the image
+ */
+@property (nonatomic) BOOL sendRequestOnClick;
+
+/**
+ Display an activityIndicatorView when requesting an image
+ Default value is NO
+ */
+@property (nonatomic) BOOL autoDisplayActivityIndicator;
+
+/**
+ The default style is white
+ */
+@property (nonatomic, readonly) UIActivityIndicatorView *activityIndicatorView;
+/**
  * A delegate that notifies you when the image has started and finished loading.
  */
 @property (nonatomic, assign) id<TTNetImageViewDelegate> delegate;
@@ -57,6 +75,7 @@
  * The TTURLRequest requester used to load this image.
  */
 @property (nonatomic, readonly) TTURLRequest* request;
+
 
 /**
  * Cancel any pending request, remove the image, and redraw the view.

@@ -103,7 +103,9 @@
     cell.textLabel.text = @"";
     TTNetImageView *imageView = [[TTNetImageView alloc] initWithFrame:CGRectMake(10, 2, 40, 40)];
     imageView.tag = 20;
+    imageView.autoDisplayActivityIndicator = YES;
     imageView.defaultImage = [UIImage imageNamed:@"defaultImage.png"];
+    imageView.sendRequestOnClick = YES;
     [cell.contentView addSubview:imageView];
     [imageView release];
   }
