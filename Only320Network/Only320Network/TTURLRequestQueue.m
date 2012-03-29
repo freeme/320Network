@@ -306,6 +306,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadNextInQueue {
+  NSLog(@"%s ",__FUNCTION__);
   _loaderQueueTimer = nil;
   
   for (int i = 0;
@@ -635,7 +636,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   }
   [loader release];
 
-  [self loadNextInQueueDelayed];// fix bug in Three20Network: should invoke loadNextInQueueDelayed
+  [self loadNextInQueue];
 }
 
 
@@ -671,7 +672,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 
   [loader release];
 
-  [self loadNextInQueueDelayed]; // fix bug in Three20Network: should invoke loadNextInQueueDelayed
+  [self loadNextInQueue]; 
 }
 
 
@@ -688,7 +689,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   TTDCONDITIONLOG(TTDFLAG_URLREQUEST, @"ERROR: %@", error);
   [self removeLoader:loader];
   [loader dispatchError:error];
-  [self loadNextInQueueDelayed]; // fix bug in Three20Network: should invoke loadNextInQueueDelayed
+  [self loadNextInQueue]; 
 }
 
 
@@ -696,7 +697,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 - (void)loaderDidCancel:(TTRequestLoader*)loader wasLoading:(BOOL)wasLoading {
   if (wasLoading) {
     [self removeLoader:loader];
-    [self loadNextInQueueDelayed]; // fix bug in Three20Network: should invoke loadNextInQueueDelayed
+    [self loadNextInQueue]; 
 
   } else {
     [_loaders removeObjectForKey:loader.cacheKey];

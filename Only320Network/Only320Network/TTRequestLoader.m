@@ -205,7 +205,7 @@ static const NSInteger kLoadMaxRetries = 2;
                   error: &error];
 
   if (nil != error) {
-    //TTNetworkRequestStopped();
+    TTNetworkRequestStopped();
 
     TT_RELEASE_SAFELY(_responseData);
     TT_RELEASE_SAFELY(_connection);

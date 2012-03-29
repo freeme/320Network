@@ -1,3 +1,8 @@
-
+build
 .DS_Store
-320NetworkDemo/320NetworkDemo.xcodeproj/project.xcworkspace/xcuserdata/*.*
+*.xcodeproj/*.mode*
+*.xcodeproj/*.pbxuser
+*.xcodeproj/*.xcworkspace
+*.xcodeproj/xcuserdata
+*.xcodeproj/*.pbxproj.DS_Store
+*.xcodeproj/*.pbxuser

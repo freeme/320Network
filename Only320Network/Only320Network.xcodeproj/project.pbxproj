@@ -7,93 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA392D1151EB0E8001212D3 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392A4151EB0E8001212D3 /* NSDataAdditions.h */; };
+		3FA392D2151EB0E8001212D3 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392A5151EB0E8001212D3 /* NSDataAdditions.m */; };
+		3FA392D3151EB0E8001212D3 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392A6151EB0E8001212D3 /* NSObjectAdditions.h */; };
+		3FA392D4151EB0E8001212D3 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392A7151EB0E8001212D3 /* NSObjectAdditions.m */; };
+		3FA392D5151EB0E8001212D3 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392A8151EB0E8001212D3 /* NSStringAdditions.h */; };
+		3FA392D6151EB0E8001212D3 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392A9151EB0E8001212D3 /* NSStringAdditions.m */; };
+		3FA392D7151EB0E8001212D3 /* TTRequestLoader-Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392AA151EB0E8001212D3 /* TTRequestLoader-Debug.h */; };
+		3FA392D8151EB0E8001212D3 /* TTRequestLoader-Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392AB151EB0E8001212D3 /* TTRequestLoader-Debug.m */; };
+		3FA392D9151EB0E8001212D3 /* TTURLRequestQueue-Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392AC151EB0E8001212D3 /* TTURLRequestQueue-Debug.h */; };
+		3FA392DA151EB0E8001212D3 /* TTURLRequestQueue-Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392AD151EB0E8001212D3 /* TTURLRequestQueue-Debug.m */; };
+		3FA392DB151EB0E8001212D3 /* TTCorePreprocessorMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392AF151EB0E8001212D3 /* TTCorePreprocessorMacros.h */; };
+		3FA392DC151EB0E8001212D3 /* TTDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392B0151EB0E8001212D3 /* TTDebug.h */; };
+		3FA392DD151EB0E8001212D3 /* TTDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392B1151EB0E8001212D3 /* TTDebug.m */; };
+		3FA392DE151EB0E8001212D3 /* TTDebugFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392B2151EB0E8001212D3 /* TTDebugFlags.h */; };
+		3FA392DF151EB0E8001212D3 /* TTErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392B3151EB0E8001212D3 /* TTErrorCodes.h */; };
+		3FA392E0151EB0E8001212D3 /* TTErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392B4151EB0E8001212D3 /* TTErrorCodes.m */; };
+		3FA392E1151EB0E8001212D3 /* TTGlobalCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392B5151EB0E8001212D3 /* TTGlobalCore.h */; };
+		3FA392E2151EB0E8001212D3 /* TTGlobalCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392B6151EB0E8001212D3 /* TTGlobalCore.m */; };
+		3FA392E3151EB0E8001212D3 /* TTGlobalCorePaths.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392B7151EB0E8001212D3 /* TTGlobalCorePaths.h */; };
+		3FA392E4151EB0E8001212D3 /* TTGlobalCorePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392B8151EB0E8001212D3 /* TTGlobalCorePaths.m */; };
+		3FA392E5151EB0E8001212D3 /* TTURLCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392BA151EB0E8001212D3 /* TTURLCache.h */; };
+		3FA392E6151EB0E8001212D3 /* TTURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392BB151EB0E8001212D3 /* TTURLCache.m */; };
+		3FA392E7151EB0E8001212D3 /* Only320Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392BC151EB0E8001212D3 /* Only320Network.h */; };
+		3FA392E8151EB0E8001212D3 /* Only320Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392BD151EB0E8001212D3 /* Only320Network.m */; };
+		3FA392E9151EB0E8001212D3 /* TTNetImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392BE151EB0E8001212D3 /* TTNetImageView.h */; };
+		3FA392EA151EB0E8001212D3 /* TTNetImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392BF151EB0E8001212D3 /* TTNetImageView.m */; };
+		3FA392EB151EB0E8001212D3 /* TTNetImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392C0151EB0E8001212D3 /* TTNetImageViewDelegate.h */; };
+		3FA392EC151EB0E8001212D3 /* TTRequestLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392C1151EB0E8001212D3 /* TTRequestLoader.h */; };
+		3FA392ED151EB0E8001212D3 /* TTRequestLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392C2151EB0E8001212D3 /* TTRequestLoader.m */; };
+		3FA392EE151EB0E8001212D3 /* TTURLDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392C3151EB0E8001212D3 /* TTURLDataResponse.h */; };
+		3FA392EF151EB0E8001212D3 /* TTURLDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392C4151EB0E8001212D3 /* TTURLDataResponse.m */; };
+		3FA392F0151EB0E8001212D3 /* TTURLImageResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392C5151EB0E8001212D3 /* TTURLImageResponse.h */; };
+		3FA392F1151EB0E8001212D3 /* TTURLImageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392C6151EB0E8001212D3 /* TTURLImageResponse.m */; };
+		3FA392F2151EB0E8001212D3 /* TTURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392C7151EB0E8001212D3 /* TTURLRequest.h */; };
+		3FA392F3151EB0E8001212D3 /* TTURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392C8151EB0E8001212D3 /* TTURLRequest.m */; };
+		3FA392F4151EB0E8001212D3 /* TTURLRequestCachePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392C9151EB0E8001212D3 /* TTURLRequestCachePolicy.h */; };
+		3FA392F5151EB0E8001212D3 /* TTURLRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392CA151EB0E8001212D3 /* TTURLRequestDelegate.h */; };
+		3FA392F6151EB0E8001212D3 /* TTURLRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392CB151EB0E8001212D3 /* TTURLRequestQueue.h */; };
+		3FA392F7151EB0E8001212D3 /* TTURLRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392CC151EB0E8001212D3 /* TTURLRequestQueue.m */; };
+		3FA392F8151EB0E8001212D3 /* TTURLRequestQueueInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392CD151EB0E8001212D3 /* TTURLRequestQueueInternal.h */; };
+		3FA392F9151EB0E8001212D3 /* TTURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392CE151EB0E8001212D3 /* TTURLResponse.h */; };
+		3FA392FA151EB0E8001212D3 /* TTUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA392CF151EB0E8001212D3 /* TTUserInfo.h */; };
+		3FA392FB151EB0E8001212D3 /* TTUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA392D0151EB0E8001212D3 /* TTUserInfo.m */; };
 		3FB188D41514DA8200A84E30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB188D31514DA8200A84E30 /* Foundation.framework */; };
-		3FB189091514DB0900A84E30 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188E11514DB0900A84E30 /* NSDataAdditions.h */; };
-		3FB1890A1514DB0900A84E30 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188E21514DB0900A84E30 /* NSDataAdditions.m */; };
-		3FB1890B1514DB0900A84E30 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188E31514DB0900A84E30 /* NSObjectAdditions.h */; };
-		3FB1890C1514DB0900A84E30 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188E41514DB0900A84E30 /* NSObjectAdditions.m */; };
-		3FB1890D1514DB0900A84E30 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188E51514DB0900A84E30 /* NSStringAdditions.h */; };
-		3FB1890E1514DB0900A84E30 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188E61514DB0900A84E30 /* NSStringAdditions.m */; };
-		3FB1890F1514DB0900A84E30 /* TTRequestLoader-Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188E71514DB0900A84E30 /* TTRequestLoader-Debug.h */; };
-		3FB189101514DB0900A84E30 /* TTRequestLoader-Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188E81514DB0900A84E30 /* TTRequestLoader-Debug.m */; };
-		3FB189111514DB0900A84E30 /* TTURLRequestQueue-Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188E91514DB0900A84E30 /* TTURLRequestQueue-Debug.h */; };
-		3FB189121514DB0900A84E30 /* TTURLRequestQueue-Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188EA1514DB0900A84E30 /* TTURLRequestQueue-Debug.m */; };
-		3FB189131514DB0900A84E30 /* Only320Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188EB1514DB0900A84E30 /* Only320Network.h */; };
-		3FB189141514DB0900A84E30 /* Only320Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188EC1514DB0900A84E30 /* Only320Network.m */; };
-		3FB189151514DB0900A84E30 /* TTCorePreprocessorMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188ED1514DB0900A84E30 /* TTCorePreprocessorMacros.h */; };
-		3FB189161514DB0900A84E30 /* TTDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188EE1514DB0900A84E30 /* TTDebug.h */; };
-		3FB189171514DB0900A84E30 /* TTDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188EF1514DB0900A84E30 /* TTDebug.m */; };
-		3FB189181514DB0900A84E30 /* TTDebugFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188F01514DB0900A84E30 /* TTDebugFlags.h */; };
-		3FB189191514DB0900A84E30 /* TTErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188F11514DB0900A84E30 /* TTErrorCodes.h */; };
-		3FB1891A1514DB0900A84E30 /* TTErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188F21514DB0900A84E30 /* TTErrorCodes.m */; };
-		3FB1891B1514DB0900A84E30 /* TTGlobalCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188F31514DB0900A84E30 /* TTGlobalCore.h */; };
-		3FB1891C1514DB0900A84E30 /* TTGlobalCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188F41514DB0900A84E30 /* TTGlobalCore.m */; };
-		3FB1891D1514DB0900A84E30 /* TTGlobalCorePaths.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188F51514DB0900A84E30 /* TTGlobalCorePaths.h */; };
-		3FB1891E1514DB0900A84E30 /* TTGlobalCorePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188F61514DB0900A84E30 /* TTGlobalCorePaths.m */; };
-		3FB1891F1514DB0900A84E30 /* TTRequestLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188F71514DB0900A84E30 /* TTRequestLoader.h */; };
-		3FB189201514DB0900A84E30 /* TTRequestLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188F81514DB0900A84E30 /* TTRequestLoader.m */; };
-		3FB189211514DB0900A84E30 /* TTURLCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188F91514DB0900A84E30 /* TTURLCache.h */; };
-		3FB189221514DB0900A84E30 /* TTURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188FA1514DB0900A84E30 /* TTURLCache.m */; };
-		3FB189231514DB0900A84E30 /* TTURLDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188FB1514DB0900A84E30 /* TTURLDataResponse.h */; };
-		3FB189241514DB0900A84E30 /* TTURLDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188FC1514DB0900A84E30 /* TTURLDataResponse.m */; };
-		3FB189251514DB0900A84E30 /* TTURLImageResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188FD1514DB0900A84E30 /* TTURLImageResponse.h */; };
-		3FB189261514DB0900A84E30 /* TTURLImageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB188FE1514DB0900A84E30 /* TTURLImageResponse.m */; };
-		3FB189271514DB0900A84E30 /* TTURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB188FF1514DB0900A84E30 /* TTURLRequest.h */; };
-		3FB189281514DB0900A84E30 /* TTURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB189001514DB0900A84E30 /* TTURLRequest.m */; };
-		3FB189291514DB0900A84E30 /* TTURLRequestCachePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB189011514DB0900A84E30 /* TTURLRequestCachePolicy.h */; };
-		3FB1892A1514DB0900A84E30 /* TTURLRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB189021514DB0900A84E30 /* TTURLRequestDelegate.h */; };
-		3FB1892B1514DB0900A84E30 /* TTURLRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB189031514DB0900A84E30 /* TTURLRequestQueue.h */; };
-		3FB1892C1514DB0900A84E30 /* TTURLRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB189041514DB0900A84E30 /* TTURLRequestQueue.m */; };
-		3FB1892D1514DB0900A84E30 /* TTURLRequestQueueInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB189051514DB0900A84E30 /* TTURLRequestQueueInternal.h */; };
-		3FB1892E1514DB0900A84E30 /* TTURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB189061514DB0900A84E30 /* TTURLResponse.h */; };
-		3FB1892F1514DB0900A84E30 /* TTUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB189071514DB0900A84E30 /* TTUserInfo.h */; };
-		3FB189301514DB0900A84E30 /* TTUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB189081514DB0900A84E30 /* TTUserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FA392A4151EB0E8001212D3 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		3FA392A5151EB0E8001212D3 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		3FA392A6151EB0E8001212D3 /* NSObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectAdditions.h; sourceTree = "<group>"; };
+		3FA392A7151EB0E8001212D3 /* NSObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectAdditions.m; sourceTree = "<group>"; };
+		3FA392A8151EB0E8001212D3 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		3FA392A9151EB0E8001212D3 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		3FA392AA151EB0E8001212D3 /* TTRequestLoader-Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTRequestLoader-Debug.h"; sourceTree = "<group>"; };
+		3FA392AB151EB0E8001212D3 /* TTRequestLoader-Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTRequestLoader-Debug.m"; sourceTree = "<group>"; };
+		3FA392AC151EB0E8001212D3 /* TTURLRequestQueue-Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTURLRequestQueue-Debug.h"; sourceTree = "<group>"; };
+		3FA392AD151EB0E8001212D3 /* TTURLRequestQueue-Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTURLRequestQueue-Debug.m"; sourceTree = "<group>"; };
+		3FA392AF151EB0E8001212D3 /* TTCorePreprocessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCorePreprocessorMacros.h; sourceTree = "<group>"; };
+		3FA392B0151EB0E8001212D3 /* TTDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDebug.h; sourceTree = "<group>"; };
+		3FA392B1151EB0E8001212D3 /* TTDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDebug.m; sourceTree = "<group>"; };
+		3FA392B2151EB0E8001212D3 /* TTDebugFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDebugFlags.h; sourceTree = "<group>"; };
+		3FA392B3151EB0E8001212D3 /* TTErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTErrorCodes.h; sourceTree = "<group>"; };
+		3FA392B4151EB0E8001212D3 /* TTErrorCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTErrorCodes.m; sourceTree = "<group>"; };
+		3FA392B5151EB0E8001212D3 /* TTGlobalCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalCore.h; sourceTree = "<group>"; };
+		3FA392B6151EB0E8001212D3 /* TTGlobalCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalCore.m; sourceTree = "<group>"; };
+		3FA392B7151EB0E8001212D3 /* TTGlobalCorePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalCorePaths.h; sourceTree = "<group>"; };
+		3FA392B8151EB0E8001212D3 /* TTGlobalCorePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalCorePaths.m; sourceTree = "<group>"; };
+		3FA392BA151EB0E8001212D3 /* TTURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLCache.h; sourceTree = "<group>"; };
+		3FA392BB151EB0E8001212D3 /* TTURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLCache.m; sourceTree = "<group>"; };
+		3FA392BC151EB0E8001212D3 /* Only320Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Only320Network.h; sourceTree = "<group>"; };
+		3FA392BD151EB0E8001212D3 /* Only320Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Only320Network.m; sourceTree = "<group>"; };
+		3FA392BE151EB0E8001212D3 /* TTNetImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTNetImageView.h; sourceTree = "<group>"; };
+		3FA392BF151EB0E8001212D3 /* TTNetImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTNetImageView.m; sourceTree = "<group>"; };
+		3FA392C0151EB0E8001212D3 /* TTNetImageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTNetImageViewDelegate.h; sourceTree = "<group>"; };
+		3FA392C1151EB0E8001212D3 /* TTRequestLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRequestLoader.h; sourceTree = "<group>"; };
+		3FA392C2151EB0E8001212D3 /* TTRequestLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRequestLoader.m; sourceTree = "<group>"; };
+		3FA392C3151EB0E8001212D3 /* TTURLDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLDataResponse.h; sourceTree = "<group>"; };
+		3FA392C4151EB0E8001212D3 /* TTURLDataResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLDataResponse.m; sourceTree = "<group>"; };
+		3FA392C5151EB0E8001212D3 /* TTURLImageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLImageResponse.h; sourceTree = "<group>"; };
+		3FA392C6151EB0E8001212D3 /* TTURLImageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLImageResponse.m; sourceTree = "<group>"; };
+		3FA392C7151EB0E8001212D3 /* TTURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequest.h; sourceTree = "<group>"; };
+		3FA392C8151EB0E8001212D3 /* TTURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLRequest.m; sourceTree = "<group>"; };
+		3FA392C9151EB0E8001212D3 /* TTURLRequestCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestCachePolicy.h; sourceTree = "<group>"; };
+		3FA392CA151EB0E8001212D3 /* TTURLRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestDelegate.h; sourceTree = "<group>"; };
+		3FA392CB151EB0E8001212D3 /* TTURLRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestQueue.h; sourceTree = "<group>"; };
+		3FA392CC151EB0E8001212D3 /* TTURLRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLRequestQueue.m; sourceTree = "<group>"; };
+		3FA392CD151EB0E8001212D3 /* TTURLRequestQueueInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestQueueInternal.h; sourceTree = "<group>"; };
+		3FA392CE151EB0E8001212D3 /* TTURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLResponse.h; sourceTree = "<group>"; };
+		3FA392CF151EB0E8001212D3 /* TTUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserInfo.h; sourceTree = "<group>"; };
+		3FA392D0151EB0E8001212D3 /* TTUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserInfo.m; sourceTree = "<group>"; };
 		3FB188D01514DA8200A84E30 /* libOnly320Network.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnly320Network.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB188D31514DA8200A84E30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FB188D71514DA8200A84E30 /* Only320Network-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Only320Network-Prefix.pch"; sourceTree = "<group>"; };
-		3FB188E11514DB0900A84E30 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		3FB188E21514DB0900A84E30 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
-		3FB188E31514DB0900A84E30 /* NSObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectAdditions.h; sourceTree = "<group>"; };
-		3FB188E41514DB0900A84E30 /* NSObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectAdditions.m; sourceTree = "<group>"; };
-		3FB188E51514DB0900A84E30 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
-		3FB188E61514DB0900A84E30 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
-		3FB188E71514DB0900A84E30 /* TTRequestLoader-Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTRequestLoader-Debug.h"; sourceTree = "<group>"; };
-		3FB188E81514DB0900A84E30 /* TTRequestLoader-Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTRequestLoader-Debug.m"; sourceTree = "<group>"; };
-		3FB188E91514DB0900A84E30 /* TTURLRequestQueue-Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTURLRequestQueue-Debug.h"; sourceTree = "<group>"; };
-		3FB188EA1514DB0900A84E30 /* TTURLRequestQueue-Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTURLRequestQueue-Debug.m"; sourceTree = "<group>"; };
-		3FB188EB1514DB0900A84E30 /* Only320Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Only320Network.h; sourceTree = "<group>"; };
-		3FB188EC1514DB0900A84E30 /* Only320Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Only320Network.m; sourceTree = "<group>"; };
-		3FB188ED1514DB0900A84E30 /* TTCorePreprocessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCorePreprocessorMacros.h; sourceTree = "<group>"; };
-		3FB188EE1514DB0900A84E30 /* TTDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDebug.h; sourceTree = "<group>"; };
-		3FB188EF1514DB0900A84E30 /* TTDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDebug.m; sourceTree = "<group>"; };
-		3FB188F01514DB0900A84E30 /* TTDebugFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDebugFlags.h; sourceTree = "<group>"; };
-		3FB188F11514DB0900A84E30 /* TTErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTErrorCodes.h; sourceTree = "<group>"; };
-		3FB188F21514DB0900A84E30 /* TTErrorCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTErrorCodes.m; sourceTree = "<group>"; };
-		3FB188F31514DB0900A84E30 /* TTGlobalCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalCore.h; sourceTree = "<group>"; };
-		3FB188F41514DB0900A84E30 /* TTGlobalCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalCore.m; sourceTree = "<group>"; };
-		3FB188F51514DB0900A84E30 /* TTGlobalCorePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalCorePaths.h; sourceTree = "<group>"; };
-		3FB188F61514DB0900A84E30 /* TTGlobalCorePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalCorePaths.m; sourceTree = "<group>"; };
-		3FB188F71514DB0900A84E30 /* TTRequestLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRequestLoader.h; sourceTree = "<group>"; };
-		3FB188F81514DB0900A84E30 /* TTRequestLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRequestLoader.m; sourceTree = "<group>"; };
-		3FB188F91514DB0900A84E30 /* TTURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLCache.h; sourceTree = "<group>"; };
-		3FB188FA1514DB0900A84E30 /* TTURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLCache.m; sourceTree = "<group>"; };
-		3FB188FB1514DB0900A84E30 /* TTURLDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLDataResponse.h; sourceTree = "<group>"; };
-		3FB188FC1514DB0900A84E30 /* TTURLDataResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLDataResponse.m; sourceTree = "<group>"; };
-		3FB188FD1514DB0900A84E30 /* TTURLImageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLImageResponse.h; sourceTree = "<group>"; };
-		3FB188FE1514DB0900A84E30 /* TTURLImageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLImageResponse.m; sourceTree = "<group>"; };
-		3FB188FF1514DB0900A84E30 /* TTURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequest.h; sourceTree = "<group>"; };
-		3FB189001514DB0900A84E30 /* TTURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLRequest.m; sourceTree = "<group>"; };
-		3FB189011514DB0900A84E30 /* TTURLRequestCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestCachePolicy.h; sourceTree = "<group>"; };
-		3FB189021514DB0900A84E30 /* TTURLRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestDelegate.h; sourceTree = "<group>"; };
-		3FB189031514DB0900A84E30 /* TTURLRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestQueue.h; sourceTree = "<group>"; };
-		3FB189041514DB0900A84E30 /* TTURLRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTURLRequestQueue.m; sourceTree = "<group>"; };
-		3FB189051514DB0900A84E30 /* TTURLRequestQueueInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLRequestQueueInternal.h; sourceTree = "<group>"; };
-		3FB189061514DB0900A84E30 /* TTURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTURLResponse.h; sourceTree = "<group>"; };
-		3FB189071514DB0900A84E30 /* TTUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserInfo.h; sourceTree = "<group>"; };
-		3FB189081514DB0900A84E30 /* TTUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA392A3151EB0E8001212D3 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				3FA392A4151EB0E8001212D3 /* NSDataAdditions.h */,
+				3FA392A5151EB0E8001212D3 /* NSDataAdditions.m */,
+				3FA392A6151EB0E8001212D3 /* NSObjectAdditions.h */,
+				3FA392A7151EB0E8001212D3 /* NSObjectAdditions.m */,
+				3FA392A8151EB0E8001212D3 /* NSStringAdditions.h */,
+				3FA392A9151EB0E8001212D3 /* NSStringAdditions.m */,
+				3FA392AA151EB0E8001212D3 /* TTRequestLoader-Debug.h */,
+				3FA392AB151EB0E8001212D3 /* TTRequestLoader-Debug.m */,
+				3FA392AC151EB0E8001212D3 /* TTURLRequestQueue-Debug.h */,
+				3FA392AD151EB0E8001212D3 /* TTURLRequestQueue-Debug.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		3FA392AE151EB0E8001212D3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3FA392AF151EB0E8001212D3 /* TTCorePreprocessorMacros.h */,
+				3FA392B0151EB0E8001212D3 /* TTDebug.h */,
+				3FA392B1151EB0E8001212D3 /* TTDebug.m */,
+				3FA392B2151EB0E8001212D3 /* TTDebugFlags.h */,
+				3FA392B3151EB0E8001212D3 /* TTErrorCodes.h */,
+				3FA392B4151EB0E8001212D3 /* TTErrorCodes.m */,
+				3FA392B5151EB0E8001212D3 /* TTGlobalCore.h */,
+				3FA392B6151EB0E8001212D3 /* TTGlobalCore.m */,
+				3FA392B7151EB0E8001212D3 /* TTGlobalCorePaths.h */,
+				3FA392B8151EB0E8001212D3 /* TTGlobalCorePaths.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3FA392B9151EB0E8001212D3 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				3FA392BA151EB0E8001212D3 /* TTURLCache.h */,
+				3FA392BB151EB0E8001212D3 /* TTURLCache.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		3FB188C51514DA8200A84E30 = {
 			isa = PBXGroup;
 			children = (
@@ -136,37 +185,30 @@
 		3FB188D51514DA8200A84E30 /* Only320Network */ = {
 			isa = PBXGroup;
 			children = (
-				3FB188E01514DB0900A84E30 /* Additions */,
-				3FB188EB1514DB0900A84E30 /* Only320Network.h */,
-				3FB188EC1514DB0900A84E30 /* Only320Network.m */,
-				3FB188ED1514DB0900A84E30 /* TTCorePreprocessorMacros.h */,
-				3FB188EE1514DB0900A84E30 /* TTDebug.h */,
-				3FB188EF1514DB0900A84E30 /* TTDebug.m */,
-				3FB188F01514DB0900A84E30 /* TTDebugFlags.h */,
-				3FB188F11514DB0900A84E30 /* TTErrorCodes.h */,
-				3FB188F21514DB0900A84E30 /* TTErrorCodes.m */,
-				3FB188F31514DB0900A84E30 /* TTGlobalCore.h */,
-				3FB188F41514DB0900A84E30 /* TTGlobalCore.m */,
-				3FB188F51514DB0900A84E30 /* TTGlobalCorePaths.h */,
-				3FB188F61514DB0900A84E30 /* TTGlobalCorePaths.m */,
-				3FB188F71514DB0900A84E30 /* TTRequestLoader.h */,
-				3FB188F81514DB0900A84E30 /* TTRequestLoader.m */,
-				3FB188F91514DB0900A84E30 /* TTURLCache.h */,
-				3FB188FA1514DB0900A84E30 /* TTURLCache.m */,
-				3FB188FB1514DB0900A84E30 /* TTURLDataResponse.h */,
-				3FB188FC1514DB0900A84E30 /* TTURLDataResponse.m */,
-				3FB188FD1514DB0900A84E30 /* TTURLImageResponse.h */,
-				3FB188FE1514DB0900A84E30 /* TTURLImageResponse.m */,
-				3FB188FF1514DB0900A84E30 /* TTURLRequest.h */,
-				3FB189001514DB0900A84E30 /* TTURLRequest.m */,
-				3FB189011514DB0900A84E30 /* TTURLRequestCachePolicy.h */,
-				3FB189021514DB0900A84E30 /* TTURLRequestDelegate.h */,
-				3FB189031514DB0900A84E30 /* TTURLRequestQueue.h */,
-				3FB189041514DB0900A84E30 /* TTURLRequestQueue.m */,
-				3FB189051514DB0900A84E30 /* TTURLRequestQueueInternal.h */,
-				3FB189061514DB0900A84E30 /* TTURLResponse.h */,
-				3FB189071514DB0900A84E30 /* TTUserInfo.h */,
-				3FB189081514DB0900A84E30 /* TTUserInfo.m */,
+				3FA392A3151EB0E8001212D3 /* Additions */,
+				3FA392AE151EB0E8001212D3 /* Base */,
+				3FA392B9151EB0E8001212D3 /* Cache */,
+				3FA392BC151EB0E8001212D3 /* Only320Network.h */,
+				3FA392BD151EB0E8001212D3 /* Only320Network.m */,
+				3FA392BE151EB0E8001212D3 /* TTNetImageView.h */,
+				3FA392BF151EB0E8001212D3 /* TTNetImageView.m */,
+				3FA392C0151EB0E8001212D3 /* TTNetImageViewDelegate.h */,
+				3FA392C1151EB0E8001212D3 /* TTRequestLoader.h */,
+				3FA392C2151EB0E8001212D3 /* TTRequestLoader.m */,
+				3FA392C3151EB0E8001212D3 /* TTURLDataResponse.h */,
+				3FA392C4151EB0E8001212D3 /* TTURLDataResponse.m */,
+				3FA392C5151EB0E8001212D3 /* TTURLImageResponse.h */,
+				3FA392C6151EB0E8001212D3 /* TTURLImageResponse.m */,
+				3FA392C7151EB0E8001212D3 /* TTURLRequest.h */,
+				3FA392C8151EB0E8001212D3 /* TTURLRequest.m */,
+				3FA392C9151EB0E8001212D3 /* TTURLRequestCachePolicy.h */,
+				3FA392CA151EB0E8001212D3 /* TTURLRequestDelegate.h */,
+				3FA392CB151EB0E8001212D3 /* TTURLRequestQueue.h */,
+				3FA392CC151EB0E8001212D3 /* TTURLRequestQueue.m */,
+				3FA392CD151EB0E8001212D3 /* TTURLRequestQueueInternal.h */,
+				3FA392CE151EB0E8001212D3 /* TTURLResponse.h */,
+				3FA392CF151EB0E8001212D3 /* TTUserInfo.h */,
+				3FA392D0151EB0E8001212D3 /* TTUserInfo.m */,
 				3FB188D61514DA8200A84E30 /* Supporting Files */,
 			);
 			path = Only320Network;
@@ -180,23 +222,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3FB188E01514DB0900A84E30 /* Additions */ = {
-			isa = PBXGroup;
-			children = (
-				3FB188E11514DB0900A84E30 /* NSDataAdditions.h */,
-				3FB188E21514DB0900A84E30 /* NSDataAdditions.m */,
-				3FB188E31514DB0900A84E30 /* NSObjectAdditions.h */,
-				3FB188E41514DB0900A84E30 /* NSObjectAdditions.m */,
-				3FB188E51514DB0900A84E30 /* NSStringAdditions.h */,
-				3FB188E61514DB0900A84E30 /* NSStringAdditions.m */,
-				3FB188E71514DB0900A84E30 /* TTRequestLoader-Debug.h */,
-				3FB188E81514DB0900A84E30 /* TTRequestLoader-Debug.m */,
-				3FB188E91514DB0900A84E30 /* TTURLRequestQueue-Debug.h */,
-				3FB188EA1514DB0900A84E30 /* TTURLRequestQueue-Debug.m */,
-			);
-			path = Additions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -204,29 +229,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB189091514DB0900A84E30 /* NSDataAdditions.h in Headers */,
-				3FB1890B1514DB0900A84E30 /* NSObjectAdditions.h in Headers */,
-				3FB1890D1514DB0900A84E30 /* NSStringAdditions.h in Headers */,
-				3FB1890F1514DB0900A84E30 /* TTRequestLoader-Debug.h in Headers */,
-				3FB189111514DB0900A84E30 /* TTURLRequestQueue-Debug.h in Headers */,
-				3FB189131514DB0900A84E30 /* Only320Network.h in Headers */,
-				3FB189151514DB0900A84E30 /* TTCorePreprocessorMacros.h in Headers */,
-				3FB189161514DB0900A84E30 /* TTDebug.h in Headers */,
-				3FB189181514DB0900A84E30 /* TTDebugFlags.h in Headers */,
-				3FB189191514DB0900A84E30 /* TTErrorCodes.h in Headers */,
-				3FB1891B1514DB0900A84E30 /* TTGlobalCore.h in Headers */,
-				3FB1891D1514DB0900A84E30 /* TTGlobalCorePaths.h in Headers */,
-				3FB1891F1514DB0900A84E30 /* TTRequestLoader.h in Headers */,
-				3FB189211514DB0900A84E30 /* TTURLCache.h in Headers */,
-				3FB189231514DB0900A84E30 /* TTURLDataResponse.h in Headers */,
-				3FB189251514DB0900A84E30 /* TTURLImageResponse.h in Headers */,
-				3FB189271514DB0900A84E30 /* TTURLRequest.h in Headers */,
-				3FB189291514DB0900A84E30 /* TTURLRequestCachePolicy.h in Headers */,
-				3FB1892A1514DB0900A84E30 /* TTURLRequestDelegate.h in Headers */,
-				3FB1892B1514DB0900A84E30 /* TTURLRequestQueue.h in Headers */,
-				3FB1892D1514DB0900A84E30 /* TTURLRequestQueueInternal.h in Headers */,
-				3FB1892E1514DB0900A84E30 /* TTURLResponse.h in Headers */,
-				3FB1892F1514DB0900A84E30 /* TTUserInfo.h in Headers */,
+				3FA392D1151EB0E8001212D3 /* NSDataAdditions.h in Headers */,
+				3FA392D3151EB0E8001212D3 /* NSObjectAdditions.h in Headers */,
+				3FA392D5151EB0E8001212D3 /* NSStringAdditions.h in Headers */,
+				3FA392D7151EB0E8001212D3 /* TTRequestLoader-Debug.h in Headers */,
+				3FA392D9151EB0E8001212D3 /* TTURLRequestQueue-Debug.h in Headers */,
+				3FA392DB151EB0E8001212D3 /* TTCorePreprocessorMacros.h in Headers */,
+				3FA392DC151EB0E8001212D3 /* TTDebug.h in Headers */,
+				3FA392DE151EB0E8001212D3 /* TTDebugFlags.h in Headers */,
+				3FA392DF151EB0E8001212D3 /* TTErrorCodes.h in Headers */,
+				3FA392E1151EB0E8001212D3 /* TTGlobalCore.h in Headers */,
+				3FA392E3151EB0E8001212D3 /* TTGlobalCorePaths.h in Headers */,
+				3FA392E5151EB0E8001212D3 /* TTURLCache.h in Headers */,
+				3FA392E7151EB0E8001212D3 /* Only320Network.h in Headers */,
+				3FA392E9151EB0E8001212D3 /* TTNetImageView.h in Headers */,
+				3FA392EB151EB0E8001212D3 /* TTNetImageViewDelegate.h in Headers */,
+				3FA392EC151EB0E8001212D3 /* TTRequestLoader.h in Headers */,
+				3FA392EE151EB0E8001212D3 /* TTURLDataResponse.h in Headers */,
+				3FA392F0151EB0E8001212D3 /* TTURLImageResponse.h in Headers */,
+				3FA392F2151EB0E8001212D3 /* TTURLRequest.h in Headers */,
+				3FA392F4151EB0E8001212D3 /* TTURLRequestCachePolicy.h in Headers */,
+				3FA392F5151EB0E8001212D3 /* TTURLRequestDelegate.h in Headers */,
+				3FA392F6151EB0E8001212D3 /* TTURLRequestQueue.h in Headers */,
+				3FA392F8151EB0E8001212D3 /* TTURLRequestQueueInternal.h in Headers */,
+				3FA392F9151EB0E8001212D3 /* TTURLResponse.h in Headers */,
+				3FA392FA151EB0E8001212D3 /* TTUserInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,23 +307,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB1890A1514DB0900A84E30 /* NSDataAdditions.m in Sources */,
-				3FB1890C1514DB0900A84E30 /* NSObjectAdditions.m in Sources */,
-				3FB1890E1514DB0900A84E30 /* NSStringAdditions.m in Sources */,
-				3FB189101514DB0900A84E30 /* TTRequestLoader-Debug.m in Sources */,
-				3FB189121514DB0900A84E30 /* TTURLRequestQueue-Debug.m in Sources */,
-				3FB189141514DB0900A84E30 /* Only320Network.m in Sources */,
-				3FB189171514DB0900A84E30 /* TTDebug.m in Sources */,
-				3FB1891A1514DB0900A84E30 /* TTErrorCodes.m in Sources */,
-				3FB1891C1514DB0900A84E30 /* TTGlobalCore.m in Sources */,
-				3FB1891E1514DB0900A84E30 /* TTGlobalCorePaths.m in Sources */,
-				3FB189201514DB0900A84E30 /* TTRequestLoader.m in Sources */,
-				3FB189221514DB0900A84E30 /* TTURLCache.m in Sources */,
-				3FB189241514DB0900A84E30 /* TTURLDataResponse.m in Sources */,
-				3FB189261514DB0900A84E30 /* TTURLImageResponse.m in Sources */,
-				3FB189281514DB0900A84E30 /* TTURLRequest.m in Sources */,
-				3FB1892C1514DB0900A84E30 /* TTURLRequestQueue.m in Sources */,
-				3FB189301514DB0900A84E30 /* TTUserInfo.m in Sources */,
+				3FA392D2151EB0E8001212D3 /* NSDataAdditions.m in Sources */,
+				3FA392D4151EB0E8001212D3 /* NSObjectAdditions.m in Sources */,
+				3FA392D6151EB0E8001212D3 /* NSStringAdditions.m in Sources */,
+				3FA392D8151EB0E8001212D3 /* TTRequestLoader-Debug.m in Sources */,
+				3FA392DA151EB0E8001212D3 /* TTURLRequestQueue-Debug.m in Sources */,
+				3FA392DD151EB0E8001212D3 /* TTDebug.m in Sources */,
+				3FA392E0151EB0E8001212D3 /* TTErrorCodes.m in Sources */,
+				3FA392E2151EB0E8001212D3 /* TTGlobalCore.m in Sources */,
+				3FA392E4151EB0E8001212D3 /* TTGlobalCorePaths.m in Sources */,
+				3FA392E6151EB0E8001212D3 /* TTURLCache.m in Sources */,
+				3FA392E8151EB0E8001212D3 /* Only320Network.m in Sources */,
+				3FA392EA151EB0E8001212D3 /* TTNetImageView.m in Sources */,
+				3FA392ED151EB0E8001212D3 /* TTRequestLoader.m in Sources */,
+				3FA392EF151EB0E8001212D3 /* TTURLDataResponse.m in Sources */,
+				3FA392F1151EB0E8001212D3 /* TTURLImageResponse.m in Sources */,
+				3FA392F3151EB0E8001212D3 /* TTURLRequest.m in Sources */,
+				3FA392F7151EB0E8001212D3 /* TTURLRequestQueue.m in Sources */,
+				3FA392FB151EB0E8001212D3 /* TTUserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +414,7 @@
 				3FB188DF1514DA8200A84E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
