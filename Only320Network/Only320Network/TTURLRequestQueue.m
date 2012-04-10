@@ -101,7 +101,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 /**
  * TODO (jverkoey May 3, 2010): Clean up this redundant code.
  */
-
+/* Gary delete 2012-4-10
 - (BOOL)dataExistsInBundle:(NSString*)URL {
   NSString* path = TTPathForBundleResource([URL substringFromIndex:9]);
   NSFileManager* fm = [NSFileManager defaultManager];
@@ -115,7 +115,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   NSFileManager* fm = [NSFileManager defaultManager];
   return [fm fileExistsAtPath:path];
 }
-
+*/
 
 /* Gary delete 2012-4-10
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -148,6 +148,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 }
 */
 
+/*Gary delete, move them to TTURLCache
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)loadFromCache: (NSString*)URL
              cacheKey: (NSString*)cacheKey
@@ -175,24 +176,24 @@ static TTURLRequestQueue* gMainQueue = nil;
       return YES;
     }
     
-    /* Gary delete 2012-4-10, loadFromBundle and loadFromDocuments operations are called in [[TTURLCache sharedCache] imageForURL:URL fromDisk:fromDisk];
+    // Gary delete 2012-4-10, loadFromBundle and loadFromDocuments operations are called in [[TTURLCache sharedCache] imageForURL:URL fromDisk:fromDisk];
      
-    if (TTIsBundleURL(URL)) {
-      *data = [self loadFromBundle:URL error:error];
-      return YES;
-
-    } else if (TTIsDocumentsURL(URL)) {
-      *data = [self loadFromDocuments:URL error:error];
-      return YES;
-
-    } else {
-      *data = [[TTURLCache sharedCache] dataForKey:cacheKey expires:expirationAge
-                                        timestamp:timestamp];
-      if (*data) {
-        return YES;
-      }
-    }
-     */
+//    if (TTIsBundleURL(URL)) {
+//      *data = [self loadFromBundle:URL error:error];
+//      return YES;
+//
+//    } else if (TTIsDocumentsURL(URL)) {
+//      *data = [self loadFromDocuments:URL error:error];
+//      return YES;
+//
+//    } else {
+//      *data = [[TTURLCache sharedCache] dataForKey:cacheKey expires:expirationAge
+//                                        timestamp:timestamp];
+//      if (*data) {
+//        return YES;
+//      }
+//    }
+    
   }
 
   return NO;
@@ -220,7 +221,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 
   return hasData;
 }
-
+*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)loadRequestFromCache:(TTURLRequest*)request {
@@ -239,7 +240,7 @@ static TTURLRequestQueue* gMainQueue = nil;
     NSDate* timestamp = nil;
     NSError* error = nil;
 
-    if ([self loadFromCache:request.urlPath cacheKey:request.cacheKey
+    if ([[TTURLCache sharedCache] loadFromCache:request.urlPath cacheKey:request.cacheKey
               expires:request.cacheExpirationAge
               fromDisk:!_suspended && (request.cachePolicy & TTURLRequestCachePolicyDisk)
               data:&data error:&error timestamp:&timestamp]) {
@@ -282,7 +283,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   NSError* error = nil;
 
   if ((loader.cachePolicy & (TTURLRequestCachePolicyDisk|TTURLRequestCachePolicyMemory))
-      && [self loadFromCache:loader.urlPath cacheKey:loader.cacheKey
+      && [[TTURLCache sharedCache] loadFromCache:loader.urlPath cacheKey:loader.cacheKey
                expires:loader.cacheExpirationAge
                fromDisk:loader.cachePolicy & TTURLRequestCachePolicyDisk
                data:&data error:&error timestamp:&timestamp]) {
@@ -555,7 +556,7 @@ static TTURLRequestQueue* gMainQueue = nil;
       TTDCONDITIONLOG(TTDFLAG_ETAGS, @"Etag: %@", etag);
 
       if (TTIsStringWithAnyText(etag)
-          && [self cacheDataExists: request.urlPath
+          && [[TTURLCache sharedCache] cacheDataExists: request.urlPath
                           cacheKey: request.cacheKey
                            expires: request.cacheExpirationAge
                           fromDisk: !_suspended
@@ -659,7 +660,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   NSData* data = nil;
   NSError* error = nil;
   NSDate* timestamp = nil;
-  if ([self loadFromCache:loader.urlPath cacheKey:loader.cacheKey
+  if ([[TTURLCache sharedCache] loadFromCache:loader.urlPath cacheKey:loader.cacheKey
                   expires:TT_CACHE_EXPIRATION_AGE_NEVER
                  fromDisk:!_suspended && (loader.cachePolicy & TTURLRequestCachePolicyDisk)
                      data:&data error:&error timestamp:&timestamp]) {
