@@ -222,6 +222,7 @@ static NSMutableDictionary* gNamedCaches = nil;
       }
       _totalPixelCount += pixelCount;
 
+      //if the _totalPixelCount it larger than _maxPixelCount(if >0), remove the old image in memory
       if (_totalPixelCount > _maxPixelCount && _maxPixelCount) {
         [self expireImagesFromMemory];
       }
@@ -469,12 +470,13 @@ static NSMutableDictionary* gNamedCaches = nil;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)imageForURL:(NSString*)URL fromDisk:(BOOL)fromDisk {
+  //Check if the image already loaded into the memory. (Gary)
   UIImage* image = [_imageCache objectForKey:URL];
 
   if (nil == image && fromDisk) {
     if (TTIsBundleURL(URL)) {
       image = [self loadImageFromBundle:URL];
-      [self storeImage:image forURL:URL];
+      [self storeImage:image forURL:URL]; // keep it in memory 
 
     } else if (TTIsDocumentsURL(URL)) {
       image = [self loadImageFromDocuments:URL];
