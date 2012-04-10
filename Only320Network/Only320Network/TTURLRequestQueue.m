@@ -323,7 +323,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   for (int i = 0;
        i < kMaxConcurrentLoads && _totalLoading < kMaxConcurrentLoads
        && _loaderQueue.count && !_suspended;
-       ++i) { // fix bug in Three20Network: add &&!_suspended
+       ++i) { //Gary fix bug in Three20Network: add &&!_suspended
     TTRequestLoader* loader = [[_loaderQueue objectAtIndex:0] retain];
     [_loaderQueue removeObjectAtIndex:0];
     [self executeLoader:loader];

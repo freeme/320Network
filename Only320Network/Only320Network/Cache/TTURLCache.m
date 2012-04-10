@@ -238,7 +238,7 @@ static NSMutableDictionary* gNamedCaches = nil;
 /**
  * TODO (jverkoey May 3, 2010): Clean up this redundant code.
  */
-- (BOOL)imageExistsFromBundle:(NSString*)URL {
+- (BOOL)dataExistsInBundle:(NSString*)URL {
   NSString* path = TTPathForBundleResource([URL substringFromIndex:9]);
   NSFileManager* fm = [NSFileManager defaultManager];
   return [fm fileExistsAtPath:path];
@@ -246,7 +246,7 @@ static NSMutableDictionary* gNamedCaches = nil;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (BOOL)imageExistsFromDocuments:(NSString*)URL {
+- (BOOL)dataExistsInDocuments:(NSString*)URL {
   NSString* path = TTPathForDocumentsResource([URL substringFromIndex:12]);
   NSFileManager* fm = [NSFileManager defaultManager];
   return [fm fileExistsAtPath:path];
@@ -444,15 +444,15 @@ static NSMutableDictionary* gNamedCaches = nil;
 
   if (!hasImage && fromDisk) {
     if (TTIsBundleURL(URL)) {
-      hasImage = [self imageExistsFromBundle:URL];
+      hasImage = [self dataExistsInBundle:URL];
       if (!hasImage) {
-        hasImage = [self imageExistsFromBundle:[TTURLCache doubleImageURLPath:URL]];
+        hasImage = [self dataExistsInBundle:[TTURLCache doubleImageURLPath:URL]];
       }
 
     } else if (TTIsDocumentsURL(URL)) {
-      hasImage = [self imageExistsFromDocuments:URL];
+      hasImage = [self dataExistsInDocuments:URL];
       if (!hasImage) {
-        hasImage = [self imageExistsFromDocuments:[TTURLCache doubleImageURLPath:URL]];
+        hasImage = [self dataExistsInDocuments:[TTURLCache doubleImageURLPath:URL]];
       }
 
     }
