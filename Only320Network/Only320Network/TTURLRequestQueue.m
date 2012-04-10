@@ -101,6 +101,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 /**
  * TODO (jverkoey May 3, 2010): Clean up this redundant code.
  */
+
 - (BOOL)dataExistsInBundle:(NSString*)URL {
   NSString* path = TTPathForBundleResource([URL substringFromIndex:9]);
   NSFileManager* fm = [NSFileManager defaultManager];
@@ -116,6 +117,7 @@ static TTURLRequestQueue* gMainQueue = nil;
 }
 
 
+/* Gary delete 2012-4-10
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSData*)loadFromBundle:(NSString*)URL error:(NSError**)error {
   NSString* path = TTPathForBundleResource([URL substringFromIndex:9]);
@@ -144,7 +146,7 @@ static TTURLRequestQueue* gMainQueue = nil;
   }
   return nil;
 }
-
+*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)loadFromCache: (NSString*)URL
@@ -167,6 +169,14 @@ static TTURLRequestQueue* gMainQueue = nil;
     return YES;
 
   } else if (fromDisk) {
+    *data = [[TTURLCache sharedCache] dataForKey:cacheKey expires:expirationAge
+                                       timestamp:timestamp];
+    if (*data) {
+      return YES;
+    }
+    
+    /* Gary delete 2012-4-10, loadFromBundle and loadFromDocuments operations are called in [[TTURLCache sharedCache] imageForURL:URL fromDisk:fromDisk];
+     
     if (TTIsBundleURL(URL)) {
       *data = [self loadFromBundle:URL error:error];
       return YES;
@@ -182,6 +192,7 @@ static TTURLRequestQueue* gMainQueue = nil;
         return YES;
       }
     }
+     */
   }
 
   return NO;
