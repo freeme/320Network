@@ -206,6 +206,15 @@ static NSMutableDictionary* gNamedCaches = nil;
     int pixelCount = image.size.width * image.size.height;
 
     if (force || pixelCount < kLargeImageSize) {
+      
+      if (nil == _imageCache) {
+        _imageCache = [[NSMutableDictionary alloc] init];
+      }
+      
+      if (nil == _imageSortedList) {
+        _imageSortedList = [[NSMutableArray alloc] init];
+      }
+      
       UIImage* existingImage = [_imageCache objectForKey:URL];
       if (nil != existingImage) {
         _totalPixelCount -= existingImage.size.width * existingImage.size.height;
@@ -215,14 +224,6 @@ static NSMutableDictionary* gNamedCaches = nil;
 
       if (_totalPixelCount > _maxPixelCount && _maxPixelCount) {
         [self expireImagesFromMemory];
-      }
-
-      if (nil == _imageCache) {
-        _imageCache = [[NSMutableDictionary alloc] init];
-      }
-
-      if (nil == _imageSortedList) {
-        _imageSortedList = [[NSMutableArray alloc] init];
       }
 
       [_imageSortedList addObject:URL];

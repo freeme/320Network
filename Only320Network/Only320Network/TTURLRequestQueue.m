@@ -306,7 +306,6 @@ static TTURLRequestQueue* gMainQueue = nil;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadNextInQueue {
-  NSLog(@"%s ",__FUNCTION__);
   _loaderQueueTimer = nil;
   
   for (int i = 0;
