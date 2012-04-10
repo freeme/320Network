@@ -171,7 +171,7 @@ static NSMutableDictionary* gNamedCaches = nil;
   [self createPathIfNecessary:cachesPath];
   [self createPathIfNecessary:cachePath];
   [self createPathIfNecessary:etagCachePath];
-
+  
   return cachePath;
 }
 
@@ -724,6 +724,7 @@ static NSMutableDictionary* gNamedCaches = nil;
     return YES;
     
   } else if (fromDisk) {
+    //???: Shall we call this method in imageForURL
     *data = [[TTURLCache sharedCache] dataForKey:cacheKey expires:expirationAge
                                        timestamp:timestamp];
     if (*data) {
@@ -762,6 +763,7 @@ static NSMutableDictionary* gNamedCaches = nil;
   BOOL hasData = [[TTURLCache sharedCache] hasImageForURL:URL fromDisk:fromDisk];
   
   if (!hasData && fromDisk) {
+    //???: Shall we call this method in hasImageForURL
     hasData = [[TTURLCache sharedCache] hasDataForKey:cacheKey expires:expirationAge];
     /*Gary delete, dataExistsInBundle and dataExistsInDocuments are checked in hasImageForURL
     if (TTIsBundleURL(URL)) {
