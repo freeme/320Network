@@ -703,6 +703,77 @@ static NSMutableDictionary* gNamedCaches = nil;
   }
 #endif
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)loadFromCache: (NSString*)URL
+             cacheKey: (NSString*)cacheKey
+              expires: (NSTimeInterval)expirationAge
+             fromDisk: (BOOL)fromDisk
+                 data: (id*)data
+                error: (NSError**)error
+            timestamp: (NSDate**)timestamp {
+  TTDASSERT(nil != data);
+  
+  if (nil == data) {
+    return NO;
+  }
+  
+  UIImage* image = [[TTURLCache sharedCache] imageForURL:URL fromDisk:fromDisk];
+  
+  if (nil != image) {
+    *data = image;
+    return YES;
+    
+  } else if (fromDisk) {
+    *data = [[TTURLCache sharedCache] dataForKey:cacheKey expires:expirationAge
+                                       timestamp:timestamp];
+    if (*data) {
+      return YES;
+    }
+    
+    /* Gary delete 2012-4-10, loadFromBundle and loadFromDocuments operations are called in [[TTURLCache sharedCache] imageForURL:URL fromDisk:fromDisk];
+     
+     if (TTIsBundleURL(URL)) {
+     *data = [self loadFromBundle:URL error:error];
+     return YES;
+     
+     } else if (TTIsDocumentsURL(URL)) {
+     *data = [self loadFromDocuments:URL error:error];
+     return YES;
+     
+     } else {
+     *data = [[TTURLCache sharedCache] dataForKey:cacheKey expires:expirationAge
+     timestamp:timestamp];
+     if (*data) {
+     return YES;
+     }
+     }
+     */
+  }
+  
+  return NO;
+}
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)cacheDataExists: (NSString*)URL
+               cacheKey: (NSString*)cacheKey
+                expires: (NSTimeInterval)expirationAge
+               fromDisk: (BOOL)fromDisk {
+  BOOL hasData = [[TTURLCache sharedCache] hasImageForURL:URL fromDisk:fromDisk];
+  
+  if (!hasData && fromDisk) {
+    if (TTIsBundleURL(URL)) {
+      hasData = [self dataExistsInBundle:URL];
+      
+    } else if (TTIsDocumentsURL(URL)) {
+      hasData = [self dataExistsInDocuments:URL];
+      
+    } else {
+      hasData = [[TTURLCache sharedCache] hasDataForKey:cacheKey expires:expirationAge];
+    }
+  }
+  
+  return hasData;
+}
 
 @end

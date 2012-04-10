@@ -160,6 +160,19 @@
  */
 - (NSString*)etagForKey:(NSString*)key;
 
+
+- (BOOL)loadFromCache: (NSString*)URL
+             cacheKey: (NSString*)cacheKey
+              expires: (NSTimeInterval)expirationAge
+             fromDisk: (BOOL)fromDisk
+                 data: (id*)data
+                error: (NSError**)error
+            timestamp: (NSDate**)timestamp;
+
+- (BOOL)cacheDataExists: (NSString*)URL
+               cacheKey: (NSString*)cacheKey
+                expires: (NSTimeInterval)expirationAge
+               fromDisk: (BOOL)fromDisk;
 /**
  * Stores a data on disk.
  */
