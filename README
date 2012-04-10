@@ -1,3 +1,43 @@
 320Network
 ============
 320Network is an iOS Http Network framework come from Three20Network.
+
+
+Todo
+============
+1. Add priority to request
+Send Normal(Defautl)
+Send ASAP
+Send When idle
+
+2. Add specific channel(thread) to send request.
+3. Add "depend on" feature to request  
+
+Overview
+============
+TTURLRequest:
+代表一个请求对象，包括请的参数，以及请求完成回调的delegates,注意是个复数形式，也就是说一个请求完成后可以通知多个委托对象。
+TTURLRequest最终会在TTURLRequestQueue中的createNSURLRequest方法中，被转换成NSMutableURLRequest对象
+需要注意的是TTURLRequest的三个参数:
+1.timeoutInterval
+2.cachePolicy: 注意有默认值是
+TTURLRequestCachePolicyDefault  = (TTURLRequestCachePolicyMemory 
+				| TTURLRequestCachePolicyDisk  
+				| TTURLRequestCachePolicyNetwork)
+3.cacheKey:　需要注意在POST和PUT请求时，是根据url，和http头中的参数生成的key，如果不同请求的url，和http头中的参数一样，而不同的参数放到了body里，那么默认的实现方法生成的cacheKey都是一样的。在取消一个Request时，是用到了这个cacheKey来查找对应的TTRequestLoader的，那么在上述情况下，是找不到正确对应的Loader的，也就是说不会正确取消一个Request。
+
+TTRequestLoader:
+1.最终调用NSURLConnection来发送HTTP请求的对象，并负责接收请求的回调。
+2.有出错重试机制
+3.这个对象的存在是一个很好的设计，TTRequestLoader保存多个相同的request，这些Request要执行的操作是一样的。
+当一个请求被发送时(非POST和PUT)，TTURLRequestQueue会先通过request的cacheKey来查找是否已经有执行同样操作的TTRequestLoader，如果有，就次这个Request添加到TTRequestLoader中，而不需要再创新一个新的TTRequestLoader对象。也就是会节省掉一个重复的网络请求，更高效。
+
+TTURLRequestQueue:
+1.通过控制同时执行的TTRequestLoader数量，来维护网络连接的并发数
+2.管理请求队列，和正在执行的请求队列，按照先进先出的方式执行请求，没有优先级
+3.通过两个维度来取消请求，一是单个请求的取消，二是通过delegate来取消请求，可能是多个请求
+4.检查TTURLCache中是否存在有效的缓存数据，如果有，侧直接返回，而不发送实际的请求。
+
+TTURLCache:
+1.负责本地缓存数据的管理
+2.对缓存的数据大小有限制，可以根据需要修改
