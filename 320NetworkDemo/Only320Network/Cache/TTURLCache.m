@@ -465,7 +465,10 @@ NSLog(@"path:%@",path);
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ 对高清图片没有支持？？
+ hasImageForURL里有支持
+ */
 - (id)imageForURL:(NSString*)URL fromDisk:(BOOL)fromDisk {
   //Check if the image already loaded into the memory. (Gary)
   UIImage* image = [_imageCache objectForKey:URL];
@@ -473,12 +476,10 @@ NSLog(@"path:%@",path);
   if (nil == image && fromDisk) {
     if (TTIsBundleURL(URL)) {
       image = [self loadImageFromBundle:URL];
-      [self storeImage:image forURL:URL]; // keep it in memory 
-
     } else if (TTIsDocumentsURL(URL)) {
       image = [self loadImageFromDocuments:URL];
-      [self storeImage:image forURL:URL];
     }
+    [self storeImage:image forURL:URL]; // keep it in memory 
   }
 
   return image;
