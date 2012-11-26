@@ -7,29 +7,31 @@
 //
 
 #import "AppDelegate.h"
-#import "ImageListController.h"
-#import "ViewController.h"
+#import "BTRootViewController.h"
 
 @implementation AppDelegate
 
-@synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize window = _window;\
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_navController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] init];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    return YES;
+  self.window.backgroundColor = [UIColor whiteColor];
+  BTRootViewController *rootViewController = [[BTRootViewController alloc] initWithStyle:UITableViewStylePlain];
+  rootViewController.title = @"Network Demo";
+  _navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+  [rootViewController release];
+  [self.window addSubview:_navController.view];
+  
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
