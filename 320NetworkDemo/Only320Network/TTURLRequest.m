@@ -104,8 +104,8 @@ const NSTimeInterval TTURLRequestUseQueueTimeout = -1.0;
 	self = [super init];
   if (self) {
     _delegates = TTCreateNonRetainingArray();
-    _cachePolicy = TTURLRequestCachePolicyNoCache;
-    //_cachePolicy = TTURLRequestCachePolicyDefault;
+//    _cachePolicy = TTURLRequestCachePolicyNoCache;
+    _cachePolicy = TTURLRequestCachePolicyDefault;
     _cacheExpirationAge = TT_DEFAULT_CACHE_EXPIRATION_AGE;
     _shouldHandleCookies = YES;
     _charsetForMultipart = NSUTF8StringEncoding;
@@ -316,6 +316,7 @@ const NSTimeInterval TTURLRequestUseQueueTimeout = -1.0;
     if (_multiPartForm) {
       return [NSString stringWithFormat:@"multipart/form-data; boundary=%@", kStringBoundary];      
     } else {
+      //TODO: fix 
       return [NSString stringWithFormat:@"application/x-www-form-urlencoded", kStringBoundary];            
     }
     
